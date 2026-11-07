@@ -2,21 +2,37 @@
   "app_name": "Kia Tabriz Net",
   "latest_version_code": 101,
   "latest_version_name": "1.0.1",
-  "update_message": "نسخه جدید ۱۰۱ آماده است!",
+  "update_message": "نسخه جدید ۱۰۱ منتشر شد! افزودن سرورهای هوشمند DNS و وایرگارد آمریکا.",
+  "update_url": "https://github.com/your-username/kia-tabriz/releases",
   "support": {
     "telegram": "https://t.me/your_channel",
-    "instagram": "https://instagram.com/your_page"
+    "instagram": "https://instagram.com/your_page",
+    "ai_assistant": "https://t.me/your_ai_bot"
   },
   "servers": [
     {
-      "name": "US Free Server 1 (Test)",
-      "protocol": "VLESS",
-      "config": "vless://b0177722-5555-4444-8888-999999999999@us-free-server.example.com:443?encryption=none&security=tls&type=ws&path=%2F#Kia-Tabriz-US-1"
+      "name": "Primary Secure DNS (Base Protocol)",
+      "protocol": "DNS",
+      "config": "https://cloudflare-dns.com/dns-query",
+      "country": "US"
     },
     {
-      "name": "US Free Server 2 (High Speed)",
-      "protocol": "VLESS",
-      "config": "vless://c1234567-1111-2222-3333-444444444444@us-fast.example.net:8443?encryption=none&security=tls&type=grpc&serviceName=gun#Kia-Tabriz-US-2"
+      "name": "Google Fast DoH Tunnel",
+      "protocol": "DNS",
+      "config": "https://dns.google/dns-query",
+      "country": "US"
+    },
+    {
+      "name": "WireGuard US Ultra (AI Ping)",
+      "protocol": "WireGuard",
+      "config": "vless://sample-us-wireguard-config",
+      "country": "US"
+    },
+    {
+      "name": "Psiphon / Lantern Hybrid Bridge",
+      "protocol": "Psiphon/Lantern",
+      "config": "psiphon://sample-hybrid-config",
+      "country": "US"
     }
   ]
 }
